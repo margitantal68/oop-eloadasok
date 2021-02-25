@@ -1,4 +1,4 @@
-package eloadas1;
+package lecture1;
 
 public class Main {
     public static void main(String [] args){
@@ -14,5 +14,11 @@ public class Main {
             refCounter2.inc();
         }
         System.out.println("refCounter2: " + refCounter2.getValue());
+//        the state of an object - OBJEKTUM allapota
+        refCounter1 = null;
+        refCounter2 = null;
+//      garbage collector
+        System.gc();
+
     }
 }
