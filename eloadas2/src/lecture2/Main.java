@@ -15,6 +15,7 @@ public class Main {
         if ( d2.isNaN() ){
             System.out.println("d2: not a number");
         }
+        // EZT NE CSINALD!!!
         if( d2 == Double.NaN ){
             System.out.println("d2 is not a number");
         }
