@@ -17,20 +17,21 @@ public class MainParameterPassing {
         //        MyInteger i3 = null;
         //        System.out.println(i3.getValue());
     }
-// azonos nevu fuggvenyek, kulonbozp parameterlistaval - POLIMORFIZMUS
+// azonos nevu fuggvenyek, kulonbozo parameterlistaval - POLIMORFIZMUS
 //    STATIKUS POLIMORFIZMUS - KOMPILALASI IDOBEN ELDOL
 
 
 // Java - csak ertek szerinti parameteratadas - pass by value
 
-//    primitiv tipusu poarameterek
+//    primitiv tipusu poarameterek - NEM MUKODIK A CSERE
+//    Az IntelliJ is 3 darab WARNING-ot JELEZ!!!
     public static void swap(int x, int y ){
         int temp = x;
         x = y;
         y = temp;
     }
 
-//    referencia tipusu parameterek
+//    referencia tipusu parameterek - A HIVATKOZOTT OBJEKTUMOK ATTRIBUTUMAIT FOGJA CSERELNI
     public static void swap(MyInteger i1, MyInteger i2){
         int temp = i1.getValue();
         i1.setValue( i2.getValue());

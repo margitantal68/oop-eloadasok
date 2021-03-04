@@ -18,6 +18,7 @@ public class Point {
         return y;
     }
 
+    //    annotation
     @Override
     public String toString() {
         return "Point{" +
