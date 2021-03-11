@@ -18,10 +18,15 @@ public class MainArrayVsArrayList {
         Random rnd = new Random();
         System.out.println( array1.length);
 
-
-        for( int i=0; i<N; ++i ){
-            array1[ i ] = "String" + rnd.nextInt(100);
+// HIBAS!!!!
+        for( String str: array1 ){
+            str = "String" + rnd.nextInt(100);
         }
+
+//        for( int i=0; i<N; ++i ){
+//            array1[ i ] = "String" + rnd.nextInt(100);
+//
+//        }
         for( String str: array1 ){
             System.out.print( str +" ");
         }

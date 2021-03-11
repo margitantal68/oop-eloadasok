@@ -13,43 +13,58 @@ import java.util.ArrayList;
 public class MainEnums {
 
     public static void main( String[] args ){
+        for( DAY day: DAY.values()){
+            System.out.println( day );
+        }
+        System.out.println();
+        for( DAY day: DAY.values()){
+            System.out.println( day.name() +" : " + day.ordinal());
+        }
+
 //        Specialisation spec1 = new Specialisation("Informatics");
 //        Specialisation spec2 = new Specialisation("Computer Science");
 //        Specialisation spec3 = new Specialisation("Automation");
 //        Specialisation spec4 = new Specialisation("Telecommunication");
+
         Specialisation.create("Informatics");
         Specialisation.create("Computer Science");
         Specialisation.create("Automation");
         Specialisation.create("Telecommunication");
-
         for( String spec: Specialisation.values()){
             System.out.println( spec );
         }
     }
+
 }
 
-
-
+enum DAY{
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY
+}
 
 class Specialisation{
-    public final String name;
+    private final String name;
 
-    public static Specialisation create(String name ){
+//    public  Specialisation(String name) {
+//        this.name = name;
+//        specialisations.add( name );
+//    }
+    public static Specialisation create(String name){
         return new Specialisation(name);
     }
 
     private Specialisation(String name) {
         this.name = name;
-        specialisations.add( name );
+        specialisations.add(name);
     }
+
+
 
     private static ArrayList<String> specialisations = new ArrayList<>();
 
     public static String[] values(){
         String[] result = new String[ specialisations.size()];
-        int i = 0;
-        for( String value: specialisations){
-            result[ i++] = value;
+        for( int i=0; i<result.length; ++i){
+            result[ i ] = specialisations.get( i );
         }
         return result;
     }
