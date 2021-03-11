@@ -48,18 +48,27 @@ class Specialisation{
 //        this.name = name;
 //        specialisations.add( name );
 //    }
+
+
 //    static factory method
+//    Csak ezzel lehet peldanyokat kesziteni!!!
     public static Specialisation create(String name){
         return new Specialisation(name);
     }
 
+//    privat konstruktor!!!!
     private Specialisation(String name) {
         this.name = name;
         specialisations.add(name);
     }
 
+//  @TODO
+//  private static ArrayList<Specialisation> specialisations = new ArrayList<>();
+
     private static ArrayList<String> specialisations = new ArrayList<>();
 
+//    @TODO
+//    public static Specialisation[] values()
     public static String[] values(){
         String[] result = new String[ specialisations.size()];
         for( int i=0; i<result.length; ++i){
