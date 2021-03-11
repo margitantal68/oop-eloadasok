@@ -48,6 +48,7 @@ class Specialisation{
 //        this.name = name;
 //        specialisations.add( name );
 //    }
+//    static factory method
     public static Specialisation create(String name){
         return new Specialisation(name);
     }
@@ -56,8 +57,6 @@ class Specialisation{
         this.name = name;
         specialisations.add(name);
     }
-
-
 
     private static ArrayList<String> specialisations = new ArrayList<>();
 
