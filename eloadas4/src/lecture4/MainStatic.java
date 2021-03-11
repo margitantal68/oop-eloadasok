@@ -1,8 +1,6 @@
-package lecture3;
+package lecture4;
 
-
-
-public class MainReadFromFile {
+public class MainStatic {
     public static void main(String[] args){
 
     }
