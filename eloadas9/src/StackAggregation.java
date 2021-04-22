@@ -26,10 +26,9 @@ public class StackAggregation {
         items.add( object );
     }
 
-    public void pop(){
+    public void pop() throws StackException{
         if( this.isEmpty()){
-            System.out.println("Stack is empty");
-            return;
+            throw new StackException("Stack is empty");
         }
         items.remove( items.size() - 1);
     }
