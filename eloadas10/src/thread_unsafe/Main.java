@@ -1,9 +1,9 @@
-package thread_safe;
+package thread_unsafe;
 
-public class MainThreadSafeCounter {
+public class Main {
     public static void main(String[] args) {
         int MAX = 10000;
-        ThreadSafeCounter counter = new ThreadSafeCounter();
+        ThreadUnsafeCounter counter = new ThreadUnsafeCounter();
 
         Thread t1 = new Thread(new Runnable() {
             @Override

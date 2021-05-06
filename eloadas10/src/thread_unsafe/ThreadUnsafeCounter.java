@@ -1,7 +1,7 @@
 package thread_unsafe;
 
 public class ThreadUnsafeCounter {
-    private int counter;
+    private volatile int counter;
 
     public void increment(){
             ++counter;
