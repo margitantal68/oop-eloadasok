@@ -8,7 +8,7 @@ public class Main {
         Set<Integer> hashset = new HashSet<>();
         Set<Integer> treeset = new TreeSet<>();
         Random random = new Random(78);
-        for( int i=0; i<100; ++i){
+        for( int i=0; i<30; ++i){
             int value = random.nextInt( 50 );
             list.add( value );
             hashset.add( value );
@@ -17,5 +17,20 @@ public class Main {
         System.out.println("List size: " + list.size());
         System.out.println("Hashset size: " + hashset.size());
         System.out.println("Treeset size: " + treeset.size());
+        System.out.print("Treeset: ");
+        for( Integer i: treeset){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+        System.out.print("Arraylist: ");
+        for( Integer i: list){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+        System.out.print("Hashset: ");
+        for( Integer i: hashset){
+            System.out.print(i+" ");
+        }
+        System.out.println();
     }
 }
