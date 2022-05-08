@@ -3,11 +3,10 @@ package exceptions;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
-public class PostfixExpressionEvaluation {
-    public PostfixExpressionEvaluation(){
-    }
+public interface IExpression {
 
-    public double evaluate( String expression ) throws ExpressionException {
+
+    public static double evaluate( String expression ) throws ExpressionException {
         // reszeredmenyek tarolasa
         Stack<Double> stack = new Stack<>();
         // egysegekre bontas
@@ -47,7 +46,7 @@ public class PostfixExpressionEvaluation {
         }
     }
 
-    private boolean isOperator(String item ){
+    private static boolean isOperator(String item ){
         item = item.trim();
         return item.equals("+") || item.equals("*") || item.equals("-") || item.equals("/");
     }
